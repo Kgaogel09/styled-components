@@ -1,17 +1,14 @@
 import styled from "styled-components";
-
-const BasicTitle = styled.h2`
-  text-align: center;
-  text-transform: capitalize;
-  color: green;
-`;
+import BasicTitle from "./components/BasicTitle";
+import Container from "./components/Container";
+import DefaultBtn from "./components/DefaultBtn";
 
 function App() {
   return (
-    <div style={{ padding: "2rem" }}>
+    <Container>
       <BasicTitle>Styled Components</BasicTitle>
-      <button className="btn">Click Me</button>
-    </div>
+      <DefaultBtn>Click Me</DefaultBtn>
+    </Container>
   );
 }
 
