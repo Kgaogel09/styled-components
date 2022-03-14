@@ -4,11 +4,14 @@ import Container from "./components/Container";
 import { HipsterBtn, DefaultBtn } from "./components/DefaultBtn";
 import { Button } from "@material-ui/core";
 import ComplexTitle from "./components/ComplexTitle";
+import AltTitle from "./components/AltTitle";
+import { colors } from "./utils";
+import Card from "./components/Card";
 
 const StyledBtn = styled(Button)`
   background-color: transparent !important;
-  color: #3f51b5 !important;
-  border: 1px solid 3f51b5 !important;
+  color: ${colors.secondary} !important;
+  border: 1px solid ${colors.secondary} !important;
   margin: 1rem !important;
 `;
 
@@ -33,6 +36,8 @@ function App() {
       </Container>
 
       <ComplexTitle title="more complex title" />
+      <AltTitle title="alternative title" />
+      <Card />
     </>
   );
 }

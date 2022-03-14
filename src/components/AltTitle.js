@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import { colors } from "../utils";
 
-function AlternativeTitle({ title, className }) {
+function AltTitle({ title }) {
   return (
-    <div className={className}>
+    <Wrapper>
       <h1>{title}</h1>
       <div className="underline"></div>
-    </div>
+    </Wrapper>
   );
 }
 
-const Wrapper = styled(AlternativeTitle)`
+const Wrapper = styled.div`
   h1 {
     text-transform: capitalize;
     text-align: center;
@@ -17,9 +18,9 @@ const Wrapper = styled(AlternativeTitle)`
   .underline {
     width: 4rem;
     height: 0.1rem;
-    background-color: #645cff;
-    margin: 0 auto;
+    background: ${colors.secondary};
+    margin: 20px auto;
   }
 `;
 
-export default Wrapper;
+export default AltTitle;
