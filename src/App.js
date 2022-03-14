@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import BasicTitle from "./components/BasicTitle";
+import { BasicTitle } from "./components/BasicTitle";
 import Container from "./components/Container";
-import DefaultBtn from "./components/DefaultBtn";
-import { HipsterBtn } from "./components/DefaultBtn";
+import { HipsterBtn, DefaultBtn } from "./components/DefaultBtn";
 import { Button } from "@material-ui/core";
+import ComplexTitle from "./components/ComplexTitle";
 
 const StyledBtn = styled(Button)`
   background-color: transparent !important;
@@ -16,8 +16,8 @@ function App() {
   return (
     <>
       <Container>
-        <BasicTitle special>Styled Components</BasicTitle>
-        <BasicTitle>Styled Components</BasicTitle>
+        <BasicTitle special>styled components</BasicTitle>
+        <BasicTitle>styled components</BasicTitle>
         <DefaultBtn>Click Me</DefaultBtn>
         <HipsterBtn>Hello</HipsterBtn>
       </Container>
@@ -31,6 +31,8 @@ function App() {
           Hello MUI
         </StyledBtn>
       </Container>
+
+      <ComplexTitle title="more complex title" />
     </>
   );
 }

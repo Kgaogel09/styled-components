@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const DefaultBtn = styled.button`
+export const DefaultBtn = styled.button`
   background: rgb(84, 178, 209);
   color: #fff;
   border: none;
@@ -16,8 +16,6 @@ const DefaultBtn = styled.button`
     border: 1px solid rgb(84, 178, 209);
   }
 `;
-
-export default DefaultBtn;
 
 export const HipsterBtn = styled(DefaultBtn)`
   background: transparent;
