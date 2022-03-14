@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { BasicTitle } from "./components/BasicTitle";
 import Container from "./components/Container";
 import { HipsterBtn, DefaultBtn } from "./components/DefaultBtn";
@@ -7,6 +7,23 @@ import ComplexTitle from "./components/ComplexTitle";
 import AltTitle from "./components/AltTitle";
 import { colors } from "./utils";
 import Card from "./components/Card";
+import { useState } from "react";
+
+const BaseTheme = {
+  color: "#222",
+  background: "#fff",
+};
+const DarkTheme = {
+  color: "#fff",
+  background: "#222",
+};
+
+const ThemeBtn = styled(Button)`
+  background-color: ${(props) => props.theme.background}!important;
+  color: ${(props) => props.theme.color} !important;
+  border: 1px solid ${(props) => props.theme.color}!important;
+  margin: 1rem !important;
+`;
 
 const StyledBtn = styled(Button)`
   background-color: transparent !important;
@@ -15,9 +32,21 @@ const StyledBtn = styled(Button)`
   margin: 1rem !important;
 `;
 
+const StyleContainer = styled(Container)`
+  color: ${(props) => props.theme.color};
+  background: ${(props) => props.theme.background};
+  margin: 20px auto;
+`;
+
 function App() {
+  const [baseTheme, setTheme] = useState(true);
+
+  const toggleTheme = () => {
+    setTheme(!baseTheme);
+  };
+
   return (
-    <>
+    <ThemeProvider theme={baseTheme === true ? BaseTheme : DarkTheme}>
       <Container>
         <BasicTitle special>styled components</BasicTitle>
         <BasicTitle>styled components</BasicTitle>
@@ -38,7 +67,14 @@ function App() {
       <ComplexTitle title="more complex title" />
       <AltTitle title="alternative title" />
       <Card />
-    </>
+
+      <StyleContainer>
+        <h3>Hello World</h3>
+        <ThemeBtn onClick={toggleTheme} variant="contained" color="primary">
+          Toggle Me
+        </ThemeBtn>
+      </StyleContainer>
+    </ThemeProvider>
   );
 }
 
