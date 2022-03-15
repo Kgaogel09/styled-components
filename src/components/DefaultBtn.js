@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const DefaultBtn = styled.button`
   background: rgb(84, 178, 209);
@@ -6,7 +6,6 @@ export const DefaultBtn = styled.button`
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  padding: 0.5rem;
   display: block;
   max-width: 100px;
   width: 100%;
@@ -16,6 +15,18 @@ export const DefaultBtn = styled.button`
     color: rgb(84, 178, 209);
     border: 1px solid rgb(84, 178, 209);
   }
+  ${({ large }) =>
+    large
+      ? css`
+          padding: 1rem;
+          font-size: 1.5rem;
+          font-weight: 700;
+        `
+      : css`
+          padding: 0.5rem;
+          font-size: 1rem;
+          font-weight: 400;
+        `}
 `;
 
 export const HipsterBtn = styled(DefaultBtn)`

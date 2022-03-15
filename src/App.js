@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components/macro";
 import { BasicTitle } from "./components/BasicTitle";
 import Container from "./components/Container";
 import { HipsterBtn, DefaultBtn } from "./components/DefaultBtn";
@@ -91,6 +91,12 @@ function App() {
         >
           Try Me
         </HipsterBtn>
+      </Container>
+
+      <Container>
+        <h3>Css helper function</h3>
+        <DefaultBtn>Click</DefaultBtn>
+        <DefaultBtn large>Click</DefaultBtn>
       </Container>
     </ThemeProvider>
   );
