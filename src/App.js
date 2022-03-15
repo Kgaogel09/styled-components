@@ -11,6 +11,7 @@ import { useState } from "react";
 import { Loader } from "./components/Loader";
 import Form from "./components/Form";
 import List from "./components/List";
+import Products from "./components/Products";
 
 const BaseTheme = {
   color: "#222",
@@ -107,6 +108,10 @@ function App() {
 
       <Container>
         <List />
+      </Container>
+
+      <Container>
+        <Products />
       </Container>
     </ThemeProvider>
   );
