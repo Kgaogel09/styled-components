@@ -9,6 +9,7 @@ import { colors } from "./utils";
 import Card from "./components/Card";
 import { useState } from "react";
 import { Loader } from "./components/Loader";
+import Form from "./components/Form";
 
 const BaseTheme = {
   color: "#222",
@@ -97,6 +98,10 @@ function App() {
         <h3>Css helper function</h3>
         <DefaultBtn>Click</DefaultBtn>
         <DefaultBtn large>Click</DefaultBtn>
+      </Container>
+
+      <Container>
+        <Form />
       </Container>
     </ThemeProvider>
   );
