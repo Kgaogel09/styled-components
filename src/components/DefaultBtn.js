@@ -6,9 +6,10 @@ export const DefaultBtn = styled.button`
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.5rem;
   display: block;
-  width: 100px;
+  max-width: 100px;
+  width: 100%;
   margin: 1rem auto;
   :hover {
     background: transparent;
@@ -25,4 +26,8 @@ export const HipsterBtn = styled(DefaultBtn)`
     background: rgb(84, 178, 209);
     color: #fff;
   }
+
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
 `;

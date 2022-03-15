@@ -60,7 +60,12 @@ function App() {
         <Button variant="contained" color="primary">
           Hello MUI
         </Button>
-        <StyledBtn variant="contained" color="primary">
+        <StyledBtn
+          href="https://mui.com/"
+          target="_blank"
+          variant="contained"
+          color="primary"
+        >
           Hello MUI
         </StyledBtn>
       </Container>
@@ -79,6 +84,18 @@ function App() {
       <Container>
         <h3>Animations Example</h3>
         <Loader />
+      </Container>
+
+      <Container>
+        <h3>AS Prop Example</h3>
+        <HipsterBtn>Click Me</HipsterBtn>
+        <HipsterBtn
+          as="a"
+          href="https://styled-components.com/"
+          target="_blank"
+        >
+          Try Me
+        </HipsterBtn>
       </Container>
     </ThemeProvider>
   );
