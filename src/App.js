@@ -10,6 +10,7 @@ import Card from "./components/Card";
 import { useState } from "react";
 import { Loader } from "./components/Loader";
 import Form from "./components/Form";
+import List from "./components/List";
 
 const BaseTheme = {
   color: "#222",
@@ -102,6 +103,10 @@ function App() {
 
       <Container>
         <Form />
+      </Container>
+
+      <Container>
+        <List />
       </Container>
     </ThemeProvider>
   );
