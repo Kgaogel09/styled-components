@@ -60,12 +60,7 @@ function App() {
         <Button variant="contained" color="primary">
           Hello MUI
         </Button>
-        <StyledBtn
-          href="https://mui.com/"
-          target="_blank"
-          variant="contained"
-          color="primary"
-        >
+        <StyledBtn href="https://mui.com/" variant="contained" color="primary">
           Hello MUI
         </StyledBtn>
       </Container>
