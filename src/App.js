@@ -8,6 +8,7 @@ import AltTitle from "./components/AltTitle";
 import { colors } from "./utils";
 import Card from "./components/Card";
 import { useState } from "react";
+import { Loader } from "./components/Loader";
 
 const BaseTheme = {
   color: "#222",
@@ -69,11 +70,16 @@ function App() {
       <Card />
 
       <StyleContainer>
-        <h3>Hello World</h3>
+        <h3>Theme Example</h3>
         <ThemeBtn onClick={toggleTheme} variant="contained" color="primary">
           Toggle Me
         </ThemeBtn>
       </StyleContainer>
+
+      <Container>
+        <h3>Animations Example</h3>
+        <Loader />
+      </Container>
     </ThemeProvider>
   );
 }
